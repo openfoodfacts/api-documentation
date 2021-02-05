@@ -3,6 +3,9 @@
 The new version of the documentation is available here: 🚀 https://documenter.getpostman.com/view/8470508/SVtN3Wzy 🚀
 Version 2 of the documentation of the V1 API. 
 
+- https://wiki.openfoodfacts.org/Documentation
+- https://world.openfoodfacts.org/files/api-documentation.html
+
 We have an older version available on the Wiki.
 We need volunteers
 - [ ] to document new features (Eco-Score, Attributes…)
