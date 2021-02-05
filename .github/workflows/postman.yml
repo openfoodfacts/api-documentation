@@ -1,0 +1,27 @@
+name: Test collection
+
+on:
+  push:
+    branches:
+      - '*'
+      - '!develop'
+      - '!master'
+      - '!release/*'
+
+jobs:
+  test:
+    name: Run Unit Tests
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Checkout
+      uses: actions/checkout@v1
+
+      - name: Run API Tests
+        id: run-newman
+        uses: anthonyvscode/newman-action@v1
+        with:
+          collection: Open Food Facts API Documentation.postman_collection.json
+          reporters: cli
+
+      - name: Output summary to console
+        run: echo ${{ steps.run-newman.outputs.summary }}
