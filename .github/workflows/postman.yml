@@ -31,15 +31,16 @@ jobs:
           name: API Doc
           path: |
             /home/runner/work/api-documentation/api-documentation/index.html
-      
+
+      - name: Deploy API documentation to Github Pages
+        uses: JamesIves/github-pages-deploy-action@4.1.4
+        with:
+          BRANCH: gh-pages
+          FOLDER: /home/runner/work/api-documentation/api-documentation/
+
       - name: Run API Tests
         id: run-newman
         uses: anthonyvscode/newman-action@v1
         with:
           collection: Open Food Facts API Documentation.postman_collection.json
           reporters: cli
-      - name: Deploy API documentation to Github Pages
-        uses: JamesIves/github-pages-deploy-action@4.1.4
-        with:
-          BRANCH: gh-pages
-          FOLDER: /home/runner/work/api-documentation/api-documentation/
