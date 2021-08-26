@@ -23,7 +23,7 @@ jobs:
         run: pwd
 
       - name: Run docgen
-        run: docgen build -i /home/runner/work/api-documentation/api-documentation/Open Food Facts API Documentation.postman_collection.json -o index.html
+        run: docgen build -i "/home/runner/work/api-documentation/api-documentation/Open Food Facts API Documentation.postman_collection.json" -o index.html
 
       - name: Upload Doc
         uses: actions/upload-artifact@v2.2.4
