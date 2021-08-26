@@ -1,12 +1,9 @@
-name: Test collection
+name: Test and build collection
 
 on:
   push:
     branches:
       - '*'
-      - '!develop'
-      - '!master'
-      - '!release/*'
 
 jobs:
   test:
