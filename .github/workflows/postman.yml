@@ -23,14 +23,14 @@ jobs:
         run: pwd
 
       - name: Run docgen
-        run: docgen build -i ./Open Food Facts API Documentation.postman_collection.json -o index.html
+        run: docgen build -i /home/runner/work/api-documentation/api-documentation/Open Food Facts API Documentation.postman_collection.json -o index.html
 
       - name: Upload Doc
         uses: actions/upload-artifact@v2.2.4
         with:
           name: API Doc
           path: |
-            ./index.html
+            /home/runner/work/api-documentation/api-documentation/index.html
       
       - name: Run API Tests
         id: run-newman
