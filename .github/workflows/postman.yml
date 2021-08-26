@@ -20,7 +20,7 @@ jobs:
         run: curl https://raw.githubusercontent.com/thedevsaddam/docgen/v3/install.sh -o install.sh && sudo chmod +x install.sh && sudo ./install.sh && rm install.sh
 
       - name: Run docgen
-        run: ls
+        run: pwd
 
       - name: Run docgen
         run: docgen build -i ./Open Food Facts API Documentation.postman_collection.json -o index.html
