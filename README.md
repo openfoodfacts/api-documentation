@@ -18,3 +18,26 @@ We need documentation maintainers
 - What can I help with ? https://github.com/openfoodfacts/api-documentation/issues/23
 
 
+# Edit the documentation
+
+
+## Install the Postman application
+
+https://www.postman.com/downloads/
+
+## Clone the repository
+
+```
+git clone https://github.com/openfoodfacts/api-documentation
+git checkout -b <DOC_FIX_BRANCH_NAME>
+```
+
+## Edit the collection and push to git
+
+* Open Postman
+* Click "Import" then "Folder" and browse to the repo's folder.
+* Postman collection and environment located in the repo will be imported in your Postman application.
+* Edit the collection using the application, and once you're done click "Export"
+* Rename the file as `off-pm-collection.json`
+* Push to git
+
