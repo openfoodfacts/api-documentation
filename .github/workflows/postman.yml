@@ -33,14 +33,14 @@ jobs:
       - name: Output summary to console
         run: echo ${{ steps.run-newman.outputs.summary }}
 
-    test:
-      name: Run API integration tests
-      runs-on: ubuntu-18.04
-      steps:
-        - name: Run API Tests
-          id: run-newman
-          uses: anthonyvscode/newman-action@v1
-          with:
-            collection: off-pm-collection.json
-            environment: off-pm-env.json
-            reporters: cli
+  test:
+    name: Run API integration tests
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Run API Tests
+        id: run-newman
+        uses: anthonyvscode/newman-action@v1
+        with:
+          collection: off-pm-collection.json
+          environment: off-pm-env.json
+          reporters: cli
