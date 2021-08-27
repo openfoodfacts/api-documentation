@@ -31,6 +31,8 @@ jobs:
           file_pattern: index.*
           commit_message: Commit docgen-generated docs
           commit_options: '--no-verify --signoff'
+      
+      - run: echo ${{ github.ref }}
 
       - name: Deploy HTML docs to Github Pages [STAGING]
         uses: JamesIves/github-pages-deploy-action@4.1.5
