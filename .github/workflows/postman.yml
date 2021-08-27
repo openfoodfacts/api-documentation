@@ -37,6 +37,8 @@ jobs:
     name: Run API integration tests
     runs-on: ubuntu-18.04
     steps:
+      - name: Checkout
+        uses: actions/checkout@v2
       - name: Run API Tests
         id: run-newman
         uses: anthonyvscode/newman-action@v1
