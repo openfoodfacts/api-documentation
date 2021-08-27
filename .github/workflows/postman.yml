@@ -43,6 +43,12 @@ jobs:
           repository-name: openfoodfacts/api-documentation-staging
           folder: .  # <- Folder containing our generated HTML docs
 
+      - name: Add comment to PR
+        uses: thollander/actions-comment-pull-request@master
+        with:
+          message: Staging documentation deployed to https://openfoodfacts.github.io/api-documentation-staging
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Deploy HTML docs to Github Pages [PROD]
         uses: JamesIves/github-pages-deploy-action@4.1.5
         if: ${{ github.ref == 'ref/heads/master' }}
