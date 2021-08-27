@@ -33,7 +33,7 @@ jobs:
         run: docgen build -i Open\ Food\ Facts\ API\ Documentation.postman_collection.json -o build/md/index.md -m 
 
       - name: Deploy HTML docs to Github Pages
-        uses: JamesIves/github-pages-deploy-action@3.7.1
+        uses: JamesIves/github-pages-deploy-action@4.1.5
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           branch: gh-pages-dev # <- Branch on which commit will be made
