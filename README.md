@@ -10,8 +10,10 @@ We have an older version available on the Wiki.
 
 # Roadmap
 
-We need volunteers
+We need documentation maintainers
 - [ ] to document new features (Eco-Score, Attributes…)
 - [ ] to improve existing documents based on feedback and questions in the #api channel
+
+- What can I help with ? https://github.com/openfoodfacts/api-documentation/issues/23
 
 
