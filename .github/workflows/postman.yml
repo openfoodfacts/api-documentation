@@ -20,7 +20,8 @@ jobs:
         id: run-newman
         uses: anthonyvscode/newman-action@v1
         with:
-          collection: Open Food Facts API Documentation.postman_collection.json
+          collection: off-pm-collection.json
+          environment: off-pm-env.json
           reporters: cli
 
       - name: Output summary to console
