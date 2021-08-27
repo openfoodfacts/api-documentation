@@ -1,27 +1,57 @@
-name: Test collection
+name: Build and test Postman collection
 
 on:
   push:
     branches:
-      - '*'
-      - '!develop'
-      - '!master'
-      - '!release/*'
+      - master
+  pull_request:
 
 jobs:
-  test:
-    name: Run Unit Tests
+  build:
+    name: Build documentation
     runs-on: ubuntu-18.04
     steps:
       - name: Checkout
-        uses: actions/checkout@v1
+        uses: actions/checkout@v2
+        
+      - name: Install docgen
+        run: curl https://raw.githubusercontent.com/thedevsaddam/docgen/v3/install.sh -o install.sh && chmod +x install.sh && ./install.sh && rm install.sh
 
+      - name: Generate HTML documentation
+        run: docgen build -i off-pm-collection.json -e off-pm-env.json -o index.html
+
+      # TODO: Debug this as it hangs
+      # - name: Generate Markdown documentation
+      #   run: docgen build -i off-pm-collection.json -e off-pm-env.json -o index.md -m
+
+      - name: Commit generated documentation to current branch
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          repository: .
+          file_pattern: index.*
+          commit_message: Commit docgen-generated docs
+          commit_options: '--no-verify --signoff'
+
+      - name: Deploy HTML docs to Github Pages
+        uses: JamesIves/github-pages-deploy-action@4.1.5
+        if: ${{ github.ref == 'ref/heads/master' }}
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: 'gh-pages' # <- Branch on which commit will be made
+          folder: .  # <- Folder containing our generated HTML docs
+
+  test:
+    name: Run API integration tests
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
       - name: Run API Tests
         id: run-newman
         uses: anthonyvscode/newman-action@v1
         with:
-          collection: Open Food Facts API Documentation.postman_collection.json
+          collection: off-pm-collection.json
+          environment: off-pm-env.json
           reporters: cli
-
       - name: Output summary to console
         run: echo ${{ steps.run-newman.outputs.summary }}
