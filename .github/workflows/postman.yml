@@ -1,12 +1,9 @@
-name: Test collection
+name: Test and build collection
 
 on:
   push:
     branches:
       - '*'
-      - '!develop'
-      - '!master'
-      - '!release/*'
 
 jobs:
   test:
@@ -16,6 +13,31 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v1
 
+      - name: Output summary to console
+        run: echo ${{ steps.run-newman.outputs.summary }}
+        
+      - name: Install docgen
+        run: curl https://raw.githubusercontent.com/thedevsaddam/docgen/v3/install.sh -o install.sh && sudo chmod +x install.sh && sudo ./install.sh && rm install.sh
+
+      - name: Run docgen
+        run: pwd
+
+      - name: Run docgen
+        run: docgen build -i "/home/runner/work/api-documentation/api-documentation/Open Food Facts API Documentation.postman_collection.json" -o index.html
+
+      - name: Upload Doc
+        uses: actions/upload-artifact@v2.2.4
+        with:
+          name: API Doc
+          path: |
+            /home/runner/work/api-documentation/api-documentation/index.html
+
+      - name: Deploy API documentation to Github Pages
+        uses: JamesIves/github-pages-deploy-action@4.1.4
+        with:
+          BRANCH: gh-pages
+          FOLDER: /home/runner/work/api-documentation/api-documentation/
+
       - name: Run API Tests
         id: run-newman
         uses: anthonyvscode/newman-action@v1
@@ -23,6 +45,3 @@ jobs:
           collection: off-pm-collection.json
           environment: off-pm-env.json
           reporters: cli
-
-      - name: Output summary to console
-        run: echo ${{ steps.run-newman.outputs.summary }}
