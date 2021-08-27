@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - master
-      - deploy-*
+      - generate-*
     pull_request:
       paths:
         - '*.json'
@@ -16,37 +16,33 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Install Node v12
-        uses: actions/setup-node@master
-        with:
-          node-version: 12
-
       - name: Install docgen
-        run:
+        run: |
           curl https://raw.githubusercontent.com/thedevsaddam/docgen/v3/install.sh -o install.sh
-          sudo chmod +x install.sh
-          sudo ./install.sh
+          chmod +x install.sh
+          ./install.sh
           rm install.sh
+      
+      - name: Create HTML and Markdown build directories
+        run: mkdir -p build/{html,md}
 
-      - name: Generate documentation from Postman collection
-        run:
-          docgen build -i Open\ Food\ Facts\ API\ Documentation.postman_collection.json -o build/html/index.html
+      - name: Generate HTML docs from Postman collection
+        run: docgen build -i Open\ Food\ Facts\ API\ Documentation.postman_collection.json -o build/html/index.html
 
-      - name: Generate documentation as Markdown
-        run:
-          docgen build -i Open\ Food\ Facts\ API\ Documentation.postman_collection.json -o build/md/index.md -m 
+      - name: Generate Markdown docs from Postman collection
+        run: docgen build -i Open\ Food\ Facts\ API\ Documentation.postman_collection.json -o build/md/index.md -m 
 
-      - name: Deploy Github Pages
+      - name: Deploy HTML docs to Github Pages
         uses: JamesIves/github-pages-deploy-action@3.7.1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          branch: gh-pages      # <- Branch on which commit will be made
+          branch: gh-pages-dev # <- Branch on which commit will be made
           folder: build/html/  # <- Folder containing our generated HTML docs
 
       - name: Commit Markdown documentation
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          branch: gh-pages
+          branch: gh-pages-dev
           repository: .
           file_pattern: build/md/index.md
           commit_message: Update Markdown documentation
@@ -55,7 +51,7 @@ jobs:
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3
         with:
-          base: gh-pages
+          base: gh-pages-dev
           delete-branch: true
           commit-message: Update API documentation
           title: Update API documentation
