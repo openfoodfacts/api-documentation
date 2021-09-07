@@ -43,6 +43,7 @@ jobs:
 
       - name: Add comment to PR
         uses: thollander/actions-comment-pull-request@1.0.2
+        if: ${{ startsWith(github.ref, 'refs/pull') }}
         with:
           message: Staging documentation deployed to https://openfoodfacts.github.io/api-documentation-staging
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
