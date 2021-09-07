@@ -50,7 +50,7 @@ jobs:
 
       - name: Deploy HTML docs to Github Pages [PROD]
         uses: JamesIves/github-pages-deploy-action@4.1.5
-        if: ${{ github.ref == 'ref/heads/master' }}
+        if: ${{ github.ref == 'refs/heads/master' }}
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           branch: gh-pages # <- Branch on which commit will be made
