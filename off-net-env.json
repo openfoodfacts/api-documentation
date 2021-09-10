@@ -1,8 +1,6 @@
 {
-	"id": "14d63863-032b-4365-ab21-a51657aa9427",
 	"name": "off-net",
-	"values": [
-		{
+	"values": [{
 			"key": "DOMAIN_NAME",
 			"value": "openfoodfacts.net",
 			"enabled": true

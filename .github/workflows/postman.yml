@@ -11,6 +11,10 @@ jobs:
     name: Build documentation
     runs-on: ubuntu-18.04
     steps:
+      - name: Set deploy env
+        run: |
+          echo "off_env=${{ github.ref == 'refs/heads/master' && 'off-org' || 'off-net'}}" >> $GITHUB_ENV
+
       - name: Checkout
         uses: actions/checkout@v2
         
@@ -18,7 +22,7 @@ jobs:
         run: curl https://raw.githubusercontent.com/thedevsaddam/docgen/v3/install.sh -o install.sh && chmod +x install.sh && ./install.sh && rm install.sh
 
       - name: Generate HTML documentation
-        run: docgen build -i off-pm-collection.json -e off-pm-env.json -o index.html
+        run: docgen build -i off-pm-collection.json -e ${{ env.off_env }}-env.json -o index.html
 
       # TODO: Debug this as it hangs
       # - name: Generate Markdown documentation
