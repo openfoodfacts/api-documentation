@@ -1,0 +1,27 @@
+{
+	"name": "off-net",
+	"values": [{
+			"key": "DOMAIN_NAME",
+			"value": "openfoodfacts.net",
+			"enabled": true
+		},
+		{
+			"key": "PRODUCT_NUMBER",
+			"value": "04963406",
+			"enabled": true
+		},
+		{
+			"key": "PROTOCOL",
+			"value": "https",
+			"enabled": true
+		},
+		{
+			"key": "API_VERSION",
+			"value": "2",
+			"enabled": true
+		}
+	],
+	"_postman_variable_scope": "environment",
+	"_postman_exported_at": "2021-08-27T09:11:37.293Z",
+	"_postman_exported_using": "Postman/8.10.0"
+}
