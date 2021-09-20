@@ -1,7 +1,6 @@
 # Documentation of the Open Food Facts API
 
 The new version of the documentation is available here: 
-- https://documenter.getpostman.com/view/8470508/SVtN3Wzy
 - Stable version of the doc: https://openfoodfacts.github.io/api-documentation/
 - Staging version of the doc: https://openfoodfacts.github.io/api-documentation-staging/
 
