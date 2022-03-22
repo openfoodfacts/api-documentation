@@ -46,7 +46,7 @@ jobs:
           folder: .  # <- Folder containing our generated HTML docs
 
       - name: Add comment to PR
-        uses: thollander/actions-comment-pull-request@v1.0.4
+        uses: thollander/actions-comment-pull-request@v1.1.0
         if: ${{ startsWith(github.ref, 'refs/pull') }}
         with:
           message: Staging documentation deployed to https://openfoodfacts.github.io/api-documentation-staging
