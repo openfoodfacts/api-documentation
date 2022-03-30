@@ -8,6 +8,9 @@ We have an older version available on the Wiki.
 
 - https://wiki.openfoodfacts.org/Documentation
 
+# Tests
+- Note: This documentation is actually able to run API tests, that will fail if not properly specified or if the API has changed, and the documentation has not. Currently, around 20 tests are failing.
+
 # Roadmap
 
 We need documentation maintainers
