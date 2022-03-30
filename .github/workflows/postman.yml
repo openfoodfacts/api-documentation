@@ -3,7 +3,7 @@ name: Build and test Postman collection
 on:
   push:
     branches:
-      - master
+      - develop
   pull_request:
 
 jobs:
@@ -13,7 +13,7 @@ jobs:
     steps:
       - name: Set deploy env
         run: |
-          echo "off_env=${{ github.ref == 'refs/heads/master' && 'off-org' || 'off-net'}}" >> $GITHUB_ENV
+          echo "off_env=${{ github.ref == 'refs/heads/develop' && 'off-org' || 'off-net'}}" >> $GITHUB_ENV
 
       - name: Checkout
         uses: actions/checkout@v3
