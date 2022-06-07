@@ -1,6 +1,6 @@
 # API documentation friction log
 
-This log lists all the glitches that makes the Open Food Facts api documentation hard to use, but frames it around a narrative or customer(user) use case. Each log item can be created as issues so thier progress can be tracked.
+This log lists all the glitches that makes the Open Food Facts [API documentation](https://openfoodfacts.github.io/api-documentation/) hard to use, but frames it around a narrative or customer(user) use case. Each log item can be created as issues so thier progress can be tracked.
 
 Title    |          Description
  ------------------------| ---------
