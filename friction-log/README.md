@@ -10,11 +10,11 @@ Title    |          Description
  |FAQ | Make it more visible and do a survey from team on more FAQ with detailed answers. The texts in the FAQ’s do not match up with the rest of the documentation. Addition of new FAQ’s is also needed since the OFF API goes through major changes every once in a while. [The link is also broken](https://openfoodfacts.github.io/api-documentation/#9FAQ)
  |Remove _unit_ and _value_ from value in  returned fields | [Taxonomy Unit](https://openfoodfacts.slack.com/archives/C043X1X90/p1653923029786469?thread_ts=1653919835.888889&cid=C043X1X90)
  |Add image to existing product | [Improved guidelines on how to add photo to an existing product irrespective of file type etc.](https://openfoodfacts.slack.com/archives/C043X1X90/p1653409395542189?thread_ts=1653213518.473549&cid=C043X1X90)
- |Tutorials | Create sample tutorials on how to build with the Open Food Facts database (either articles or video tutorials)
+ |Tutorials | Create real-life sample tutorials on how to build with the Open Food Facts database (either articles or video tutorials)
  |Glossary | Build a glossary for all technical terms in this project
  |Visibility | The documentation isnt easy to see , at least it should be visible in the project landing page and github .
  |Navigation | Current documentation is overcrowded and difficult to navigate. The side navbar section does not stay in the same place when the user scrolls down, this makes the docs harder to use since the user has to scroll upwards again to find new information within the docs.
- |Authentication | Do we need to authenticate at any point? If yes, indicate properly.
+ |Authentication | Do we need to authenticate at any point when using this API? If yes, indicate properly.
 
 ## Future Proposals
 
