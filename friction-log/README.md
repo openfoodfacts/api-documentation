@@ -4,7 +4,7 @@ This log lists all the glitches that makes the Open Food Facts api documentation
 
 Title    |          Description
  ------------------------| ---------
- | How to filter products based on countries| Do you use countries or countries_tag ? (Properly indicate in the next doc)
+ | Filter products based on countries| Do you use countries or countries_tag ? (Properly indicate in the next doc)
  | JSON response| The fields returned in a response are not properly described. For example it turns out that _nutriments.unit_ and _nutriments.value_ does not mean anything. Can the [READ Request](https://openfoodfacts.github.io/api-documentation/#collapse-2READrequests-Getnutritionfactsforaspecificbarcode) response length be reviewed? This is because the response is too lengthy and so many information can be lost in the crowd.
  |Contribution guidelines | A more detailed and easily understandable guideline for open source enthusiasts to easily contribute to the current documentation.
  |FAQ | Make it more visible and do a survey from team on more FAQ with detailed answers. The texts in the FAQ’s do not match up with the rest of the documentation. Addition of new FAQ’s is also needed since the OFF API goes through major changes every once in a while. [The link is also broken](https://openfoodfacts.github.io/api-documentation/#9FAQ)
