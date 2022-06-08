@@ -1,4 +1,4 @@
-# API documentation friction log
+# API Documentation Friction Log
 
 This log lists all the glitches that makes the [Open Food Facts API documentation](https://openfoodfacts.github.io/api-documentation/) hard to use, but frames it around a narrative or customer(user) use case. Each log item can be created as issues so thier progress can be tracked.
 
@@ -23,3 +23,11 @@ After the new documention has its first phase shipped, these plans can be looked
 ### Proper contributor follow-up and community check-in
 
 Create good first issues, do follow ups on contributors for these issues and keep improving contributors guideline. Schedule weekly/biweekly contributors meet/newcomers call so new contributors can habe a great headstart with contributing to the project.
+
+## API Friction Log
+
+During the survey , some frictions were discovered that came from the API itself. They are key things to look out while building the next API version.
+
+Title    |          Description
+ ------------------------| ---------
+ |Search| Current API: not being able to do a precise search on product name. E.g _The database result are working fine for normal products like “Milk” but when I try to query for a fruit or vegetable like “Apple” the results always show me products like “Apple juice”, “Apple rings”  instead of the actual product I'm searching for which is an Apple._
