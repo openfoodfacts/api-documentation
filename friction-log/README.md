@@ -26,7 +26,7 @@ Create good first issues, do follow ups on contributors for these issues and kee
 
 ## API Friction Log
 
-During the survey , some frictions were discovered that came from the API itself. They are key things to look out while building the next API version.
+During the survey , some frictions were discovered that resulted from the API itself. They are key things to look out while building the next API version.
 
 Title    |          Description
  ------------------------| ---------
