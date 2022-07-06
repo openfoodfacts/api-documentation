@@ -1,36 +1,38 @@
-# Documentation of the Open Food Facts API
+# README
 
-The new version of the documentation is available here: 
-- Stable version of the doc: https://openfoodfacts.github.io/api-documentation/
-- Staging version of the doc: https://openfoodfacts.github.io/api-documentation-staging/
+## Documentation of the Open Food Facts API
+
+The new version of the documentation is available here :
+
+* Stable version of the doc: https://openfoodfacts.github.io/api-documentation/
+* Staging version of the doc: https://openfoodfacts.github.io/api-documentation-staging/
 
 We have an older version available on the Wiki.
 
-- https://wiki.openfoodfacts.org/Documentation
+* https://wiki.openfoodfacts.org/Documentation
 
-# Roadmap
+## Roadmap
 
 We need documentation maintainers
-- [ ] to document new features (Eco-Score, Attributes…)
-- [ ] to improve existing documents based on feedback and questions in the #api channel
 
-- What can I help with ? https://github.com/openfoodfacts/api-documentation/issues/23
+* [ ] to document new features (Eco-Score, Attributes…)
+* [ ] to improve existing documents based on feedback and questions in the #api channel
+* [ ] What can I help with ? https://github.com/openfoodfacts/api-documentation/issues/23
 
+## Edit the documentation
 
-# Edit the documentation
-
-## Install the Postman application
+### Install the Postman application
 
 https://www.postman.com/downloads/
 
-## Clone the repository
+### Clone the repository
 
 ```
 git clone https://github.com/openfoodfacts/api-documentation
 git checkout -b <DOC_FIX_BRANCH_NAME>
 ```
 
-## Edit the collection with Postman
+### Edit the collection with Postman
 
 * Open Postman
 * Click "Import" then "Folder" and browse to this repository's folder.
@@ -39,18 +41,18 @@ git checkout -b <DOC_FIX_BRANCH_NAME>
 * Rename the file as `off-pm-collection.json`
 * Save it (overwrite the original one)
 
-## Push to git
+### Push to git
 
-Now it's time to propose your changes as a pull request on the repository.
-We're going to make a branch and commit our updated `off-pm-collection.json`.
+Now it's time to propose your changes as a pull request on the repository. We're going to make a branch and commit our updated `off-pm-collection.json`.
 
 Run:
-  ```
-  git checkout -b <NEW_BRANCH_NAME>
-  git add off-pm-collection.json
-  git commit -m "<COMMIT_MESSAGE>"`
-  git push --set-upstream origin <NEW_BRANCH_NAME>
-  ```
+
+```
+git checkout -b <NEW_BRANCH_NAME>
+git add off-pm-collection.json
+git commit -m "<COMMIT_MESSAGE>"`
+git push --set-upstream origin <NEW_BRANCH_NAME>
+```
 
 Once you are done:
 
