@@ -22,6 +22,8 @@ Title    |          Description
  |Version |3 different versions of the documentation, but no authoritative version (wiki (obsolete, should be deleted), api-documentation (more up to date but not complete), Postman cloud (obsolete).
  |Broswer compatibility | It does not display in firefox
  |News & Updates | A News & Updates section where users are informed of the updates that have been made to the documentation.
+ |Local Machine Server | Include the [local deployment server url](http://world.openfoodfacts.localhost/) to the Open API file and explain its use case. We may have a developers note section for things that developers should take not of . for example this.
+ |How to contribute to the Open API file | If changes were to be made to the open api spec file , add a guideline to help people know a few things about the open api file and how to contribute to it.
 
 ## Future Proposals
 
