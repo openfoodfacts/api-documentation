@@ -60,3 +60,18 @@ Once you are done:
 * Navigate to https://github.com/openfoodfacts/api-documentation
 * Open a new PR from your branch ("Create Pull Request" button).
 * View your updated documentation that was automatically deployed to the staging environment https://openfoodfacts.github.io/api-documentation-staging.
+
+
+## Applications using this API
+
+### Official application
+
+The official Open Food Facts app uses the API.
+
+### Third party applications
+
+Feel free to open a PR to add your application in this list.
+
+- **Gluten Scan**. [Android](https://play.google.com/store/apps/details?id=com.healthyfood.gluten_free_app) / [iOS](https://apps.apple.com/ch/app/gluten-scanner/id1540660083)
+- **Halal & Healthy**. [Android](https://play.google.com/store/apps/details?id=com.TagIn.Tech.handh) / [iOS](https://apps.apple.com/ch/app/halal-healthy/id1603051382)
+- **Fitness Tracker**. [Android](https://play.google.com/store/apps/details?id=dk.cepk.fitness_tracker)
