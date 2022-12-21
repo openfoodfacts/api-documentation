@@ -3,7 +3,7 @@
 ## Deprecation notice
 
 **Important**:
-This documentation is deprecated in favour of the new OpenAPI documentation (see below)
+This documentation is being deprecated in favour of the new OpenAPI documentation (see below)
 
 ## Up-to-date Documentation of the Open Food Facts API
 
