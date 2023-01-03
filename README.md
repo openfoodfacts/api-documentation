@@ -1,8 +1,19 @@
-# README
+# API Documentation
 
-## Documentation of the Open Food Facts API
+## Deprecation notice
 
-The new version of the documentation is available here :
+**Important**:
+This documentation is being deprecated in favour of the new OpenAPI documentation (see below)
+
+## Up-to-date Documentation of the Open Food Facts API
+
+* intro: https://openfoodfacts.github.io/openfoodfacts-server/introduction/api/
+* reference: https://openfoodfacts.github.io/openfoodfacts-server/reference/api/ 
+* The source: https://github.com/openfoodfacts/openfoodfacts-server/tree/main/docs/reference
+
+## Rendering of this (deprecated) documentation
+
+The API documentation is rendered here (see above for the more up-to-date documentation):
 
 * Stable version of the doc: https://openfoodfacts.github.io/api-documentation/
 * Staging version of the doc: https://openfoodfacts.github.io/api-documentation-staging/
@@ -19,7 +30,9 @@ We need documentation maintainers
 * [ ] to improve existing documents based on feedback and questions in the #api channel
 * [ ] What can I help with ? https://github.com/openfoodfacts/api-documentation/issues/23
 
-## Edit the documentation
+## Edit this (deprecated) documentation
+
+Remember that this project is deprecated, you should instead contribute to the OpenAPI documentation.
 
 ### Install the Postman application
 
