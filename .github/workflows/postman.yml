@@ -16,7 +16,7 @@ jobs:
           echo "off_env=${{ github.ref == 'refs/heads/develop' && 'off-org' || 'off-net'}}" >> $GITHUB_ENV
 
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         
       - name: Install docgen
         run: curl https://raw.githubusercontent.com/thedevsaddam/docgen/v3/install.sh -o install.sh && chmod +x install.sh && ./install.sh && rm install.sh
@@ -68,7 +68,7 @@ jobs:
         run: |
           echo "off_env=${{ github.ref == 'refs/heads/master' && 'off-org' || 'off-net'}}" >> $GITHUB_ENV
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Run API Tests
         id: run-newman
         uses: anthonyvscode/newman-action@v1
