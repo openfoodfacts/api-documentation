@@ -29,7 +29,7 @@ jobs:
       #   run: docgen build -i off-pm-collection.json -e off-pm-env.json -o index.md -m
 
       - name: Commit generated documentation to current branch
-        uses: stefanzweifel/git-auto-commit-action@v4
+        uses: stefanzweifel/git-auto-commit-action@v5
         with:
           repository: .
           file_pattern: index.*
