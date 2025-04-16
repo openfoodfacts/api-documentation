@@ -7,9 +7,10 @@ This documentation is being deprecated in favour of the new OpenAPI documentatio
 
 ## Up-to-date Documentation of the Open Food Facts API
 
-* intro: https://openfoodfacts.github.io/openfoodfacts-server/introduction/api/
-* reference: https://openfoodfacts.github.io/openfoodfacts-server/reference/api/ 
-* The source: https://github.com/openfoodfacts/openfoodfacts-server/tree/main/docs/reference
+* intro: https://openfoodfacts.github.io/openfoodfacts-server/api/
+* OpenAPI source: https://github.com/openfoodfacts/openfoodfacts-server/tree/main/docs/api/ref
+
+# Archive 
 
 ## Rendering of this (deprecated) documentation
 
